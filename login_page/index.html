@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <section class="login">
+        <div class="container">
+            <h4 class="login-h4">LOGIN</h4>
+            <div>
+                
+                <form id="loginForm" action="/login" method="POST">
+                    <i class='bx bxs-user'></i><input type="text" placeholder="email" class="email"><br>
+                    <i class='bx bxs-lock-alt' ></i><input type="password" class="password" placeholder="password"><br>
+                    <input type="checkbox" class="check">remember me?
+                    <br><input type="button" value="login" class="login-btn"><br>
+                    <h5 class="no-account">Don't have an account?<a href="">Register</a></h5>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+
+    document.querySelector('.login-btn').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get email and password values
+    const email = document.querySelector('.email').value;
+    const password = document.querySelector('.password').value;
+
+    // Regular expression for email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Simple validation
+    if (email === "" || password === "") {
+        alert("Email and password cannot be empty.");
+    } else if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+    } else if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+    } else {
+        alert("Login successful!");
+    }
+});
+
+</script>
+
+</html>

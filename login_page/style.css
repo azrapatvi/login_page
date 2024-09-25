@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+    transition: 0s;
+}
+body{
+    background:rgba(0,0,0,0.7) url(background-image.jpg) ;
+    background-position: center;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+.container{
+    border-radius: 20px;
+    min-height: 50vh;
+    background-color: #978991;
+    width: 25%;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(20px);
+    background: transparent;
+    
+}
+.login-h4{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+form{
+    color: white;
+    padding: 0px 10px;
+}
+form .email,.password{
+    color: white;
+    font-size: 17px;
+    padding:10px 40px;
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid;
+    background: transparent;
+    
+}
+input::placeholder{
+    color: white;
+}
+.check{
+    margin: 20px;
+    padding: 20px;
+}
+.bxs-user{
+    position: absolute;
+    top:105px;
+    left: 25px;
+}
+.bxs-lock-alt{
+    position: absolute;
+    top:180px;
+    left: 25px;
+}
+.login-btn{
+    border: 1px solid #0a060b;
+    font-size: 20px;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color:#0a060b;
+    cursor: pointer;
+}
+.login-btn:hover{
+    background-color: #201a28;
+}
+.no-account{
+    padding: 10px;
+}
